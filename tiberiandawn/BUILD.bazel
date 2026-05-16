@@ -12,5 +12,6 @@ cc_library(
     name = "subset",
     srcs = [
         "COORDA.h",
+        "Shape.cpp",
     ],
 )

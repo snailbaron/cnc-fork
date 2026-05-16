@@ -170,7 +170,7 @@ int __cdecl Get_Shape_Uncomp_Size(void const *shape);
 ------------------------------- setshape.asm --------------------------------
 */
 extern "C" {
-void __cdecl Set_Shape_Buffer(void const *buffer, int size);
+void Set_Shape_Buffer(void *buffer, int size);
 }
 /*
 ------------------------------- shapeinf.asm --------------------------------
