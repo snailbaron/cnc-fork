@@ -42,81 +42,78 @@
 
 //#pragma warn -hid
 
-#ifdef NEVER
-Map (screen) class heirarchy.
-
- MapeditClass (most derived class) -- scenario editor
-        │
-   MouseClass -- handles mouse animation and display control
-        │
-  ScrollClass -- map scroll handler
-        │
-    HelpClass -- pop-up help text handler
-        │
-     TabClass -- file folder tab screen mode control dispatcher
-        │
- SidebarClass -- displays and controls construction list sidebar
-        │
-   PowerClass -- display power production/consumption bargraph
-        │
-   RadarClass -- displays and controls radar map
-        │
- DisplayClass -- general tactical map display handler
-        │
-     MapClass -- general tactical map data handler
-        │
- GScreenClass (pure virtual base class) -- generic screen control
-
-                          AbstractClass
-                                  │
-                                  │
-                                  │
-                                  │
-                            ObjectClass
-                                  │
-       ┌──────┬──────────┬────────┼────────┬────────────────┬───────────┐
-   AnimClass  │  TemplateClass    │        ├─ FuseClass     │    TerrainClass
-              │                   │        ├─ FlyClass      │
-              │                   │  BulletClass            │
-       OverlayClass        MissionClass               SmudgeClass
-                                  │
-                             RadioClass
-                                  │
-                                  ├─ CrewClass
-                                  ├─ FlasherClass
-                                  ├─ StageClass
-                                  ├─ CargoClass
-                            TechnoClass
-                                  │
-                       ┌──────────┴────────────────────────────┐
-                   FootClass                           BuildingClass
-                       │
-         ┌─────────────┴┬─────────────┐
-    DriveClass  InfantryClass         ├─ FlyClass
-         │                      AircraftClass
-       ┌─┴─────────┐
-       │           │
-       │     VesselClass
-       │
-    UnitClass
-
-
-                            AbstractTypeClass
-                                    │
-                              ObjectTypeClass
-                                    │
-             ┌──────────────────────┼────────────┬─────────────────┐
-             │                      │            │                 │
-       TechnoTypeClass              │            │                 │
-             │                BulletTypeClass    │                 │
-             │                           TemplateTypeClass         │
-    ┌────────┴─────┬───────────┬──────────────┬────────┐    TerrainTypeClass
-    │              │           │              │        │
-UnitTypeClass      │   BuildingTypeClass      │  VesselTypeClass
-                   │                          │
-           AircraftTypeClass          InfantryTypeClass
-#endif
-
+// Map (screen) class heirarchy.
+//
+//  MapeditClass (most derived class) -- scenario editor
+//         │
+//    MouseClass -- handles mouse animation and display control
+//         │
+//   ScrollClass -- map scroll handler
+//         │
+//     HelpClass -- pop-up help text handler
+//         │
+//      TabClass -- file folder tab screen mode control dispatcher
+//         │
+//  SidebarClass -- displays and controls construction list sidebar
+//         │
+//    PowerClass -- display power production/consumption bargraph
+//         │
+//    RadarClass -- displays and controls radar map
+//         │
+//  DisplayClass -- general tactical map display handler
+//         │
+//      MapClass -- general tactical map data handler
+//         │
+//  GScreenClass (pure virtual base class) -- generic screen control
+//
+//                           AbstractClass
+//                                   │
+//                                   │
+//                                   │
+//                                   │
+//                             ObjectClass
+//                                   │
+//        ┌──────┬──────────┬────────┼────────┬────────────────┬───────────┐
+//    AnimClass  │  TemplateClass    │        ├─ FuseClass     │    TerrainClass
+//               │                   │        ├─ FlyClass      │
+//               │                   │  BulletClass            │
+//        OverlayClass        MissionClass               SmudgeClass
+//                                   │
+//                              RadioClass
+//                                   │
+//                                   ├─ CrewClass
+//                                   ├─ FlasherClass
+//                                   ├─ StageClass
+//                                   ├─ CargoClass
+//                             TechnoClass
+//                                   │
+//                        ┌──────────┴────────────────────────────┐
+//                    FootClass                           BuildingClass
+//                        │
+//          ┌─────────────┴┬─────────────┐
+//     DriveClass  InfantryClass         ├─ FlyClass
+//          │                      AircraftClass
+//        ┌─┴─────────┐
+//        │           │
+//        │     VesselClass
+//        │
+//     UnitClass
+//
+//
+//                             AbstractTypeClass
+//                                     │
+//                               ObjectTypeClass
+//                                     │
+//              ┌──────────────────────┼────────────┬─────────────────┐
+//              │                      │            │                 │
+//        TechnoTypeClass              │            │                 │
+//              │                BulletTypeClass    │                 │
+//              │                           TemplateTypeClass         │
+//     ┌────────┴─────┬───────────┬──────────────┬────────┐    TerrainTypeClass
+//     │              │           │              │        │
+// UnitTypeClass      │   BuildingTypeClass      │  VesselTypeClass
+//                    │                          │
+//            AircraftTypeClass          InfantryTypeClass
 
 #include	"watcom.h"
 #include "lint.h"
