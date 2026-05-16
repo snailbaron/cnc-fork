@@ -1,0 +1,3 @@
+build --copt=-fdiagnostics-color
+build --copt=-Wall --copt=-Wextra --copt=-Wpedantic
+build --copt=-Werror
